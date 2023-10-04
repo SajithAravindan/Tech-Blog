@@ -37,6 +37,12 @@ background-size: cover;
     font-style: italic;
   }
   
+  .blog-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
   .blogCreate {
     font-weight: bold;
     font-style: italic;
