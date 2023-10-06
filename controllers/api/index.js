@@ -4,8 +4,10 @@ const userRoutes = require('./userroute.js');
 const postRoutes = require('./postroute.js');
 const commentRoutes = require('./commentroute.js');
 
-router.use('/users', userRoutes);
-router.use('/posts', postRoutes);
-router.use('/comments', commentRoutes)
+//Path: 'api/users' , 'api/posts', 'api/comments'
+
+router.use('/users', userRoutes);//Go to Users Route
+router.use('/posts', postRoutes);//Go to Posts Route
+router.use('/comments', commentRoutes)//Go to Comments Route
 
 module.exports = router;
