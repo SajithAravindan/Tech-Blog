@@ -19,7 +19,7 @@ Post.init(
             }
         },
         content: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(5000),
             allowNull: false,
             validate: {
                 len: [1]

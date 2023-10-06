@@ -1,0 +1,30 @@
+
+<article>
+    <br> &nbsp;
+    <a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
+<br> &nbsp; 
+     <div class="card" style="width: 40rem;">
+        <div class="card-header">
+            <h2>Edit Post</h2>
+        </div>
+        <div class="card-body">
+            <form id="frmUpdatePost">
+                <div class="form-group">
+                    <label for="postTitle">Title</label>
+                    <input type="text" id="postTitle" name="postTitle" class="form-control" value="{{post.title}}"/>
+                </div>
+                <div class="form-group">
+                    <label for="postText">Content</label>
+                    <textarea id="postText" name="postText" class="form-control" rows="10">{{post.content}}</textarea>
+                </div><br>
+                <button type="submit" class="btn btn-primary">Update Post</button>
+                <button type="button" class="btn btn-primary" id="btnDeletePost">Delete Post</button>
+            </form>
+        </div>
+    </div>
+</article>
+
+{{#if loggedIn}}
+<script src="/js/editpost.js"></script>
+<script src="/js/deletepost.js"></script>
+{{/if}}

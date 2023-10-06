@@ -1,0 +1,23 @@
+<div>
+    {{#if this}}
+    <br>
+    <div class="card" style="width: 70rem;background-color:#e3f2fd;">
+        <div class="card-header">
+            <h2>Comments</h2>
+        </div>
+    </div>
+    <br>
+    {{/if}}
+    {{#each this}}
+    <div class="card" style="width: 70rem;">
+        <div class="card-header">
+            {{user.username}} <p class="blogCreate text-right"> commented on {{formatDate created_at}}</p>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                {{comment_text}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

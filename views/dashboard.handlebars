@@ -1,0 +1,16 @@
+<section class="new-post-section">
+    <button type="submit" id="btnNewPost">+ Create new post</button>
+</section>
+
+{{#if posts.length}}
+<section>
+    <h2>Your Dashboard</h2>    
+        {{#each posts as |postitem|}}       
+            {{> post postitem}}
+            <div class="container blogBoxed">
+            <a href="/dashboard/edit/{{postitem.id}}">Edit Post</a> </div>      
+        {{/each}}    
+</section>
+{{/if}}
+
+<script src="/js/createpost.js"></script>

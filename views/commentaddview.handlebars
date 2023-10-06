@@ -1,0 +1,29 @@
+<a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
+<br>
+<br>
+
+{{> post post}}
+
+{{#if loggedIn}}
+<br>
+<div class="card" style="width: 40rem;">
+    <div class="card-header">
+        <h2>Add Comment</h2>
+    </div>
+    <div class="card-body">
+        <form id="frnCommentAdd">            
+            <div class="form-group">
+                <label for="postText">Content</label>
+                <textarea id="commentText" name="commentText" class="form-control" rows="10"></textarea>
+            </div><br>
+            <button type="submit" class="btn btn-primary">Add Comment</button>            
+        </form>
+    </div>
+</div>
+{{/if}}
+
+{{> comment post.comments}}
+
+{{#if loggedIn}}
+<script src="/js/comment.js"></script>
+{{/if}}
