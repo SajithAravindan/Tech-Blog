@@ -3,7 +3,7 @@ async function fnUserSignup(event) {
 
     const username = document.querySelector('#txtboxUsernameSignUp').value.trim();
     const password = document.querySelector('#txtboxPwdSignUp').value.trim();
-alert(1)
+
     if (username && password) {
         const response = await fetch('/api/users', {
             method: 'post',
