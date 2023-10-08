@@ -18,6 +18,20 @@ body {
   /* The First font family is from Google fonts*/
   font-family: 'Titillium Web', Arial, Helvetica, sans-serif;  
   font-size: 20px;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.footer {
+  padding: 10px;
+  text-align: center;
 }
 
 /* Main Section Buttons Styling */
@@ -36,96 +50,48 @@ button:hover {
   background: var(--btnBackgroundHover);
 }
 
-.navTitle {
+.navigationTitle {
   font-weight: 900;
   font-size: xx-large;
   color: black;
 }
 
-.blogBox {
+.postBox {
   margin-top: 8px;
   border-style: solid;
   border-color: #e3f2fd;
 }
 
-.blogBoxed {
+.postBoxed {
   margin-top: 0px;
   border-style: solid;
   border-color: #e3f2fd;
 }
 
-.blogTitle {
+.postTitle {
   text-decoration: none;
   color: black;
 }
 
-.blogDesc {
+.postDesc {
   margin-bottom: 5px;
   padding: 2px;
   background-color: #ffffff;
 }
 
-.blogDescMain {
+.postDescMain {
   font-weight: 700;
 }
 
-.blogDescTwo {
+.postDescTwo {
   font-size: 25px;
   font-style: italic;
 }
 
-.blog-list {
+.post-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
-
-.blogCreate {
-  font-weight: bold;
-  font-style: italic;
-  font-size: 15px;
-  padding: 5px;
-  color: black;
-}
-
-.blogBoxCont {
-  margin-top: 10px;
-  border-style: solid;
-  background-color: rgb(113, 143, 62);
-}
-
-.formCont {
-  margin-top: 10px;
-  max-width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
-.commentCont {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  max-width: 75%;
-  background-color: rgb(113, 143, 62);
-}
-
-.commentOwner {
-  font-size: 14px;
-}
-
-.btnComment {
-  margin-top: 10px;
-}
-
-.commentText {
-  font-weight: bold;
-  padding-top: 10px;
-  background-color: rgb(113, 143, 62);
-}
-
-.commentCont {
-  border-style: dashed;
 }
 
 .headerRow {
@@ -156,3 +122,4 @@ a:hover {
 .form-group {
   margin-top: 10px;
 }
+

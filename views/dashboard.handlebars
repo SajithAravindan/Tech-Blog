@@ -10,7 +10,7 @@
     <h2>Your Dashboard</h2>    
         {{#each posts as |postitem|}}       
             {{> post postitem}}
-            <div class="container blogBoxed">
+            <div class="container postBoxed">
             <a href="/dashboard/edit/{{postitem.id}}">Edit Post</a> </div>      
         {{/each}}    
 </section>

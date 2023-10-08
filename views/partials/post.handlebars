@@ -1,22 +1,22 @@
 {{!-- Common Partial to Display the Post Details--}}
 <div class="row">
-    <div class="container blogBox">
+    <div class="container postBox">
         <div class="row  justify-content-center headerRow">
             <div class="col-8 mt-2">
                 <h4>
-                    <a class="blogTitle text-uppercase" href="/post/{{id}}">{{title}}</a>
+                    <a class="postTitle text-uppercase" href="/post/{{id}}">{{title}}</a>
                 </h4>
             </div>
             <div class="col-4 mt-2">
-                <p class="blogCreate text-right">Created by
+                <p class="postCreate text-right">Created by
                     {{user.username}}
                     on
                     {{formatDate created_at}}
                 </p>
             </div>
         </div>
-        <div class="blogDesc">
-            <p class="text-justify blogDescMain">
+        <div class="postDesc">
+            <p class="text-justify postDescMain">
                 {{content}}
             </p>
         </div>
