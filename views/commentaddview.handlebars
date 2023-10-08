@@ -1,10 +1,12 @@
+{{!-- Bread crumbs back to dashboard --}}
 <a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
 <br>
 <br>
-
+{{!-- Displays the selected Post --}}
 {{> post post}}
 
 {{#if loggedIn}}
+{{!-- Create New Comment Section --}}
 <br>
 <div class="card" style="width: 40rem;">
     <div class="card-header">
@@ -21,9 +23,10 @@
     </div>
 </div>
 {{/if}}
-
+{{!-- Displays all the previous comments for this user --}}
 {{> comment post.comments}}
 
 {{#if loggedIn}}
+{{!-- Calls the JS File to call the related route and hit the realtive Restend point for Adding New Comment--}}
 <script src="/js/comment.js"></script>
 {{/if}}

@@ -1,8 +1,9 @@
-
+{{!-- Displays the selected Post with option to Edit/Delete it --}}
 <article>
     <br> &nbsp;
     <a href="/dashboard" class="go-back"> &larr; Back to dashboard</a>
 <br> &nbsp; 
+{{!-- Edit Post Section --}}
      <div class="card" style="width: 40rem;">
         <div class="card-header">
             <h2>Edit Post</h2>
@@ -25,6 +26,7 @@
 </article>
 
 {{#if loggedIn}}
+{{!-- Calls the JS Files to call the related routes and hit the realtive Restend point for Edit/Delete Post--}}
 <script src="/js/editpost.js"></script>
 <script src="/js/deletepost.js"></script>
 {{/if}}

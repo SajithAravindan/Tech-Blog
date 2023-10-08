@@ -1,8 +1,10 @@
+{{!-- Create New Post Button --}}
 <br>
 <section class="new-post-section">
     <button type="submit" id="btnNewPost">+ Create new post</button>
 </section>
 <br>
+{{!-- Displays all the Posts related to the logged in User --}}
 {{#if posts.length}}
 <section>
     <h2>Your Dashboard</h2>    
@@ -13,5 +15,5 @@
         {{/each}}    
 </section>
 {{/if}}
-
+{{!-- Calls the JS File to call the related route for creation of new post --}}
 <script src="/js/createpost.js"></script>
