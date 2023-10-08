@@ -1,8 +1,11 @@
+//Import Dependencies
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
+// Initialize Comment model (table) by extending off Sequelize's Model class
 class Comment extends Model{};
 
+// Set up fields and rules for Comments model
 Comment.init(
     {
         id: {
@@ -18,14 +21,14 @@ Comment.init(
                 len: [1]
             }
         },
-        user_id: {
+        user_id: {//Foreign Key
             type: DataTypes.INTEGER,
             references: {
                 model: 'user',
                 key: 'id'
             }
         },
-        post_id: {
+        post_id: {//Foreign Key
             type: DataTypes.INTEGER,
             references: {
                 model: 'post',
@@ -42,4 +45,4 @@ Comment.init(
     }
 )
 
-module.exports= Comment;
+module.exports= Comment;//Export Model

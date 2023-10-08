@@ -1,6 +1,8 @@
+//Async Function to call the related route for the realtive Restend point for User Login
 async function fnUserLogin(event) {
     event.preventDefault();
-    console.log('in');
+    
+    //Get the UserName & Password Value
     const strUserName = document.querySelector('#txtboxUsername').value.trim();
     const strPassWord = document.querySelector('#txtboxPwd').value.trim();
 
@@ -15,5 +17,6 @@ async function fnUserLogin(event) {
         else alert(response.statusText);        
     }
 }
+//Button Event Listner
 document.querySelector('#frmLogin').addEventListener('submit', fnUserLogin);
 

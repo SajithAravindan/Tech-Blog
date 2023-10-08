@@ -1,13 +1,16 @@
+//Import Dependencies
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
+// Initialize User model (table) by extending off Sequelize's Model class
 class User extends Model {
-    checkPassword(loginPw) {
+    checkPassword(loginPw) {//Function to check user Password by decrypting.
       return bcrypt.compareSync(loginPw, this.password);
     }
   }
 
+  // Set up fields and rules for User model
   User.init({
     id: {
         type: DataTypes.INTEGER,
@@ -28,11 +31,11 @@ class User extends Model {
     }
 }, {
     hooks: {
-        async beforeCreate(newUserData) {
+        async beforeCreate(newUserData) {//Encrypts Password before adding New record
             newUserData.password = await bcrypt.hash(newUserData.password, 10);
             return newUserData;
         },
-        async beforeUpdate(updatedUserData) {
+        async beforeUpdate(updatedUserData) {//Encrypts Password before Updating record
             updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
             return updatedUserData;
         }
@@ -44,5 +47,4 @@ class User extends Model {
     modelName: 'user'
 })
 
-
-module.exports = User;
+module.exports = User;//Export Model

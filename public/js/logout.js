@@ -1,3 +1,4 @@
+//Async Function to call the related route for the realtive Restend point for User Logout
 async function logout() {
     const response = await fetch('/api/users/logout', {
         method: 'post',
@@ -12,5 +13,5 @@ async function logout() {
         alert(response.statusText);
     }
 }
-
+//Button Event Listner
 document.querySelector('#logout').addEventListener('click', logout);
