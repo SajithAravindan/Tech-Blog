@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 3001;//Define port
 
 //Declare session
 const sess = {
-  secret: process.env.SS_DB_SECRET,
+  secret: 'secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
@@ -33,7 +33,7 @@ app.set('view engine', 'handlebars');
 
 //Middleware
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);

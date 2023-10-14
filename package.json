@@ -28,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/SajithAravindan/Tech-Blog/issues"
   },
-  "homepage": "https://github.com/SajithAravindan/Tech-Blog#readme"
+  "homepage": "https://github.com/SajithAravindan/Tech-Blog#readme",
+  "devDependencies": {
+    "@types/express-handlebars": "^6.0.0"
+  }
 }
