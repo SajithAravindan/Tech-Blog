@@ -2,8 +2,7 @@ const router = require('express').Router();
 const { User, Post, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, (req, res) => {
-    console.log('in dashboard')
+router.get('/', withAuth, (req, res) => {    
     Post.findAll({
             where: {
                 user_id: req.session.user_id

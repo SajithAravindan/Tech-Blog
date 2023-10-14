@@ -64,7 +64,7 @@ GIVEN a CMS-style blog site
 
 
 ## Technologies Used
-Node.js, Express.js, Sequelize and MySQL.
+Node.js, Express.js, Handlebars, Sessions, Sequelize and MySQL.
 
   
 ## Demo
