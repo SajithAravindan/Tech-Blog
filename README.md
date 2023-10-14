@@ -69,8 +69,9 @@ Node.js, Express.js, Handlebars, Sessions, Sequelize and MySQL.
   
 ## Demo
 
-[(./imgs/demo.jpg)]
+<img src='/public/imgs/Demo.png'>
 
+Deployed Application URL: https://calm-stream-60888-077b07d80633.herokuapp.com/
 
 ## License
 * Please refer to the LICENSE in the repo. <a href="https://github.com/SajithAravindan/E-commerce_APP/blob/main/LICENSE">(MIT License)</a>
